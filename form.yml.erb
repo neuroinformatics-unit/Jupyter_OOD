@@ -1,17 +1,21 @@
 ---
+cluster: SWC
 attributes:
-  desktop: "xfce"
-  bc_vnc_idle: 0
-  bc_vnc_resolution:
-    required: true
-  node_type: null
+  bc_num_hours:
+    value: 1
+  bc_num_slots:
+    value: 1
+  bc_account: null
+  mode:
+    widget: "select"
+    label: "Jupyter Mode"
+    help: "Choose between Jupyter Lab and Jupyter Notebook"
+    options:
+      - [ "Jupyter Lab", "lab"]
+      - [ "Jupyter Notebook", "notebook"]
+    value: "lab"  # Setting Jupyter Lab as the default mode
 form:
-  - bc_vnc_idle
-  - desktop
+  - mode
   - bc_account
   - bc_num_hours
   - bc_num_slots
-  - node_type
-  - bc_queue
-  - bc_vnc_resolution
-  - bc_email_on_started
