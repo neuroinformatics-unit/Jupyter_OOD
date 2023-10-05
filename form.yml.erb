@@ -14,8 +14,17 @@ attributes:
       - [ "Jupyter Lab", "lab"]
       - [ "Jupyter Notebook", "notebook"]
     value: "lab"  # Setting Jupyter Lab as the default mode
+  classroom:
+    widget: "select"
+    label: "Classroom Mode"
+    help: "Enable if this session is for a class"
+    options:
+      - ["Yes", "1"]
+      - ["No", "0"]
+    value: "0"  # Default: No
 form:
   - mode
+  - classroom
   - bc_account
   - bc_num_hours
   - bc_num_slots
