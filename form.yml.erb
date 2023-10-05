@@ -1,8 +1,3 @@
-<%-
-  groups = OodSupport::User.new.groups.sort_by(&:id).tap { |groups|
-    groups.unshift(groups.delete(OodSupport::Process.group))
-  }.map(&:name).grep(/^P./)
--%>
 ---
 cluster: SWC
 form:
@@ -36,9 +31,8 @@ attributes:
     label: "Project"
     widget: select
     options:
-      <%- groups.each do |group| %>
-      - "<%= group %>"
-      <%- end %>
+      - 1
+      - 2
   cuda_version:
     widget: "select"
     label: "CUDA Version"
